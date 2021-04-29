@@ -1,0 +1,315 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+	<category>
+		<pattern>*</pattern>
+		<template></template>
+	</category>
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+    
+	<category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+	
+    <category>
+        <pattern>HEY</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+    
+	<category>
+        <pattern>HEYA</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YO</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+    
+	<category>
+        <pattern>SUP</pattern>
+        <template>
+            <random>
+				<li>Hey!</li>
+				<li>Hello</li>
+				<li>Hi</li>
+				<li>How's it going</li>
+				<li>Sup</li>
+				<li>Yo</li>
+			</random>
+        </template>
+    </category>
+	
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <template>
+            Nice to meet you <set name="name"><star/></set>, whats going on in the world of Magic today?
+        </template>
+    </category>
+	
+    <category>
+        <pattern>WHAT ARE YOU UP TO</pattern>
+        <template>
+            <random>
+				<li>Playing some magic, you?</li>
+				<li>Not much to be honest.</li>
+				<li>Wishing I was playing magic right now</li>
+				<li>Being munky</li>
+				<li>Going Ape</li>
+				<li>Just woke up</li>
+				<li>Not much, you?</li>
+				<li>Talking to you clearly</li>
+				<li>Trying to get by in life</li>
+			</random>
+        </template>
+    </category>	
+	
+	<category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>
+            Your name is <get name="name"/>, of course!
+        </template>
+    </category>
+	
+	<category>
+        <pattern>TELL ME SOME LORE</pattern>
+        <template>
+            <random>
+				<li>Jace and Liliana had an intimate relationship in the past</li>
+				<li>Sarkhan Vol was never actually born in current existence</li>
+				<li>Karn was a time travel test dummy created by Urza</li>
+				<li>Slivers only exist on Dominaria because of the Riptide Project</li>
+				<li>We dont know if Yawgmoth is alive or dead</li>
+				<li>No one actually knows what the eldrazi titans are</li>
+				<li>Sorin Markov saved all of humanity on Innistrad, not so evil huh?</li>
+				<li>Teferi abandoned Dominaria during the phyrexian invasion</li>
+			</random>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>I PLAY *</pattern>
+        <template>
+            In response, i'll counter it :)
+        </template>
+    </category>
+
+	<category>
+        <pattern>DO YOU KNOW *</pattern>
+        <template>
+            I do not know <star/>
+        </template>
+    </category>
+	
+	<!-- Logic input -->
+	<category>
+		<pattern> I KNOW THAT * IS *</pattern>
+		<template>
+			#31$<star index="1"/> is <star index="2"/>
+		</template>
+	</category>  
+
+	<category>
+		<pattern> CHECK THAT * IS *</pattern>
+		<template>
+			#32$<star index="1"/> is <star index="2"/>
+		</template>
+	</category> 
+
+	<category>
+		<pattern> CHECK THAT * IS * AND *</pattern>
+		<template>
+			#33$<star index="1"/> is <star index="2"/> and <star index="3"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> CHECK THAT * IS NOT *</pattern>
+		<template>
+			#34$<star index="1"/> is not <star index="2"/>
+		</template>
+	</category>  	
+   
+   	<category>
+		<pattern> CHECK THAT ALL * ARE *</pattern>
+		<template>
+			#35$<star index="1"/> are <star index="2"/>
+		</template>
+	</category>  	
+
+   	<category>
+		<pattern> CHECK THAT * HAS TYPE *</pattern>
+		<template>
+			#36$<star index="1"/> type <star index="2"/>
+		</template>
+	</category>  
+	
+	<category>
+		<pattern> CHECK THAT * IS COLOUR *</pattern>
+		<template>
+			#37$<star index="1"/> colour <star index="2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TELL ME ABOUT *</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>  	
+	
+	<category>
+		<pattern> WHAT IS *</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>  	
+	
+	<category>
+		<pattern> WHAT DOES * DO</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>  
+	
+		<category>
+		<pattern> TELL ME ABOUT *?</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>  	
+	
+	<category>
+		<pattern> WHAT IS *?</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>  	
+	
+	<category>
+		<pattern> WHAT DOES * DO?</pattern>
+		<template>
+			#38$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> HOW MUCH IS * WORTH</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> HOW MUCH IS *</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> HOW MUCH DOES * COST</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+		<category>
+		<pattern> HOW MUCH IS * WORTH?</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> HOW MUCH IS *?</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> HOW MUCH DOES * COST?</pattern>
+		<template>
+			#39$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> SHOW ME ARTWORK BY *</pattern>
+		<template>
+			#40$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> SHOW ARTWORK BY *</pattern>
+		<template>
+			#40$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> GET ARTWORK BY THE ARTIST OF *</pattern>
+		<template>
+			#41$<star index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> SHOW ME SOMETHING BY THE ARTIST OF *</pattern>
+		<template>
+			#41$<star index="1"/>
+		</template>
+	</category>
+
+</aiml>

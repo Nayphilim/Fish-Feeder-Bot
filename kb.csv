@@ -1,0 +1,50 @@
+colour (blue)
+colour (red)
+colour (black)
+colour (white)
+colour (green)
+
+card_type (enchantment)
+Card_type (artifact)
+card_type (instant)
+card_type (sorcery)
+card_type (land)
+card_type (creature)
+card_type (basic_land)
+
+basic_land (x) -> land (x)
+duel_land (y) -> land (y)
+basic_land (x) ->  -duel_land (x)
+
+basic_land  (island)
+basic_land  (mountain)
+basic_land  (swamp)
+basic_land  (plains)
+basic_land  (forest)
+
+blue(island)
+red (mountain)
+black (swamp)
+white (plains)
+green (forest)
+
+duel_land (badlands)
+duel_land (bayou)
+duel_land (plateau)
+duel_land (savannah)
+duel_land (scrubland)
+duel_land (taiga)
+duel_land (tropical_island)
+duel_land (tundra)
+duel_land (underground_sea)
+duel_land (volcanic_island)
+
+duel_land (x) -> colour(y) & colour(z)
+
+red(badlands)
+black(badlands)
+
+"type(bayou, swamp)"
+"type(bayou, forest)"
+
+artifact(-island)
